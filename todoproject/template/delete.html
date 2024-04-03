@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* Centering the form */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <p>Are you sure the task is done</p>
+        <button type="submit">Confirm</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

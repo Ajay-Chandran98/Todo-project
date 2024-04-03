@@ -1,0 +1,13 @@
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="POST" class="text-center">
+                {% csrf_token %}
+                {{ f.as_p }}
+                <button type="submit" class="btn btn-primary">Confirm</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
